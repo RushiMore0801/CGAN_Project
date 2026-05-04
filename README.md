@@ -1,33 +1,50 @@
-# Text-to-Image Generation using CGAN
+# Text-to-Image Generation using CGAN & Transformers
 
 ## Project Overview
-This project implements a complete text-to-image generation pipeline by integrating:
+This project implements a **comprehensive text-to-image generation pipeline** by integrating multiple AI components:
 
+- Dataset analysis
 - Text preprocessing
-- Text embedding generation
+- Text embedding using Transformers
 - Conditional GAN (CGAN) for image generation
 
-The system takes a text description as input and generates a corresponding image, simulating a real-world AI pipeline.
+The system simulates a **real-world AI workflow** where text descriptions are converted into meaningful visual outputs.
+
+## Project Tasks Covered
+
+### 1. Dataset Analysis
+- Loaded and explored datasets (e.g., Oxford Flowers / CIFAR)
+- Analyzed:
+  - Number of classes
+  - Image resolution
+  - Data distribution
+- Visualized images with labels/captions
 
 ---
 
-## Key Components
+### 2. Text Preprocessing & Embedding
+- Used **Hugging Face Transformers**
+- Steps:
+  - Tokenization
+  - Encoding
+  - Embedding generation (CLIP/Text Encoder)
+- Converted text → numerical vectors
 
-### Text Preprocessing
-- Cleans and tokenizes input text
-- Prepares text for embedding generation
+---
 
-### Text Embedding
-- Uses transformer-based models (CLIP/Text Encoder)
-- Converts text into numerical vector representations
+### 3. CGAN Implementation
+- Built **Conditional GAN**
+- Generator input:
+  - Noise vector
+  - Label / text embedding
+- Discriminator:
+  - Validates image + condition pair
 
-### GAN-based Image Generation
-- Conditional GAN (CGAN)
-- Generator takes:
-  - Random noise
-  - Text embeddings
-- Discriminator evaluates:
-  - Image authenticity
-  - Condition consistency
+✔ Generated images for:
+- Circle
+- Square
+- Simple patterns
 
-## 🧠 Pipeline Architecture
+---
+
+### 4. Text-to-Image Pipeline (Final Integration)
